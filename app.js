@@ -1,6 +1,19 @@
   const input = document.getElementById("taskInput");
   const addBtn = document.getElementById("addBtn");
   const listEl = document.getElementById("taskList");
+  const container = document.getElementById("container")
+  const colorSwitcher = document.getElementById("btnSwitch");
+
+  colorSwitcher.addEventListener("click" , () => {
+    
+  isDark = !isDark
+   container.style.backgroundColor = isDark ? "black" : "#fff"
+   colorSwitcher.style.backgroundColor = isDark ? "#fff" : "#333" 
+   colorSwitcher.style.color = isDark ? "#333"  : "#fff" 
+   colorSwitcher.textContent = isDark ? "Switch to light ☀️" : "Switch to dark 🌒"
+})
+
+  let isDark = false;
 
   let listItems = [];
 
